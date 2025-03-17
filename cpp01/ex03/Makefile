@@ -1,4 +1,4 @@
-SRC = megaphone.cpp
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -6,7 +6,7 @@ CXX =  -std=c++98
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-NAME = megaphone
+NAME = weapon
 
 all: $(NAME)
 
