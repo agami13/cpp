@@ -5,21 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/17 19:57:21 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/03/17 23:09:26 by ybouaoud         ###   ########.fr       */
+/*   Created: 2025/03/17 23:10:49 by ybouaoud          #+#    #+#             */
+/*   Updated: 2025/03/18 00:55:17 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "sed.hpp"
+#include "Harl.hpp"
 
-int main(int argc, char *argv[]) {
-	if (argc != 4) {
-		std::cerr << "Error: Wrong number of parameters" << std::endl;
-		return (1);
+int main(int argc, char **argv) {
+	if (argc != 2) {
+		std::cerr << "Usage: ./harl <filename>" << std::endl;
+		return 1;
 	}
-	if (start_sed(argv)) {
-		std::cerr << "Error: Failed to execute sed" << std::endl;
-		return (1);
-	}
-	return (0);
+	
+	Harl harl;
+	harl.complain(argv[1]);
+	return 0;
 }
