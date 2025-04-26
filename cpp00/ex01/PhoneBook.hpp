@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/16 15:58:14 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 11:07:14 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:41:07 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,16 @@
 # include <sstream>
 
 class Contact {
+
+
 	private:
 		std::string 	first_name;
 		std::string 	last_name;
 		std::string		nickname;
 		std::string 	phone_number;
 		std::string 	darkest_secret;
+
+
 	public:
 		void			set_first_name(std::string first_name);
 		void			set_last_name(std::string last_name);
@@ -39,9 +43,13 @@ class Contact {
 		std::string		get_nickname();
 		std::string		get_phone_number();
 		std::string		get_darkest_secret();
+
+
 };
 
 class PhoneBook {
+
+
 	public:
 		Contact 		contacts[8];
 		int				contact_count;
@@ -49,6 +57,8 @@ class PhoneBook {
 		void			add_contact(PhoneBook& phonebook);
 		void			display_contact();
 		void			exit_phonebook();
+
+
 };
 
 std::string				get_input();
