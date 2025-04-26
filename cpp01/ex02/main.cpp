@@ -6,15 +6,15 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 18:10:11 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/03/17 18:14:59 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/26 20:47:36 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-int main()
-{
+int main() {
+	
 	std::string str = "HI THIS IS BRAIN";
 	std::string *stringPTR = &str;
 	std::string &stringREF = str;
@@ -28,4 +28,5 @@ int main()
 	std::cout << "Value of the stringREF: " << stringREF << std::endl;
 
 	return (0);
+
 }
