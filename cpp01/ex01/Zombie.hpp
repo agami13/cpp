@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 02:25:28 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 20:47:10 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/26 23:48:42 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,12 @@ class Zombie {
 
 	public:
 		void announce( void );
-		void SetZombie( std::string name );
+		Zombie( std::string name );
+		Zombie( void );
+		~Zombie( void );
 
 };
+
+Zombie* zombieHorde( int N, std::string name );
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 18:18:03 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 20:48:00 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/28 14:01:29 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ class HumanB {
 		void	attack();
 		void	setWeapon(Weapon &weapon);
 		HumanB(std::string name);
+		~HumanB();
 
 };
 

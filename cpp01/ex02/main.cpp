@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 18:10:11 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 20:47:36 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/26 23:52:40 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 
 int main() {
 	
-	std::string str = "HI THIS IS BRAIN";
-	std::string *stringPTR = &str;
-	std::string &stringREF = str;
+	std::string  	str = "HI THIS IS BRAIN";
+	std::string  	*stringPTR = &str;
+	std::string&  	stringREF = str;
 
 	std::cout << "Address of the string: " << &str << std::endl;
 	std::cout << "Address of the stringPTR: " << stringPTR << std::endl;

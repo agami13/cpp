@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 02:25:28 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 20:46:21 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/27 00:03:50 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ class Zombie {
 	public:
 		void announce( void );
 		Zombie( std::string name );
+		~Zombie( void );
 
 };
+
+void		randomChump( std::string name );
+Zombie*		newZombie( std::string name );
 
 #endif

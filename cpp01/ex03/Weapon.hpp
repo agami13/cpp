@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 18:18:17 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 20:48:27 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/26 23:56:21 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ class Weapon {
 		std::string getType();
 		void setType(std::string type);
 		Weapon(std::string type);
+		Weapon();
+		~Weapon();
 
 };
 
