@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 23:10:49 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/26 20:50:47 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:55:17 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int argc, char **argv) {
 	
 	if (argc != 2) {
-		std::cerr << "Usage: ./harl <filename>" << std::endl;
+		std::cerr << "Usage: ./harl <complain>" << std::endl;
 		return 1;
 	}
 	

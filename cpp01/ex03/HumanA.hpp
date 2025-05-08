@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 18:17:58 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/04/29 20:10:35 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/04/29 20:37:44 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 class HumanA {
 	
 	private:
-		std::string name;
-		Weapon *weapon;
+		std::string _name;
+		Weapon& 	_weapon;
 	
 	public:
 		void	attack();
