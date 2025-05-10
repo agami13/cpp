@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/09 16:38:20 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/05/10 16:14:59 by ybouaoud         ###   ########.fr       */
+/*   Created: 2025/05/09 17:51:46 by ybouaoud          #+#    #+#             */
+/*   Updated: 2025/05/10 16:42:35 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef SCAVTRAP_HPP
+# define SCAVTRAP_HPP
 
-int main() {
-	ScavTrap scavtrap("Guardy");
+# include "ClapTrap.hpp"
 
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.guardGate();
-	return 0;
-}
+class ScavTrap : public ClapTrap {
+	
+	public:
+		ScavTrap(std::string name);
+		~ScavTrap();
+		void attack(const std::string& target);
+		void guardGate();
+
+};
+
+
+
+
+#endif

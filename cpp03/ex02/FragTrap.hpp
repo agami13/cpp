@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/09 16:38:20 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/05/10 16:14:59 by ybouaoud         ###   ########.fr       */
+/*   Created: 2025/05/10 16:27:06 by ybouaoud          #+#    #+#             */
+/*   Updated: 2025/05/10 16:42:48 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-int main() {
-	ScavTrap scavtrap("Guardy");
+# include "ClapTrap.hpp"
 
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.guardGate();
-	return 0;
-}
+class FragTrap : public ClapTrap {
+
+	public:
+		FragTrap(std::string name);
+		~FragTrap();
+		void	highFivesGuys( void );
+
+};
+
+
+
+#endif
