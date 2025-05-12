@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/09 16:38:20 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/05/10 16:50:35 by ybouaoud         ###   ########.fr       */
+/*   Created: 2025/05/12 18:15:23 by ybouaoud          #+#    #+#             */
+/*   Updated: 2025/05/12 18:49:10 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef POLYMORPHISM_HPP
+# define POLYMORPHISM_HPP
 
-int main() {
-	ScavTrap scavtrap("Guardy");
+# include <iostream>
+# include <string>
 
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(95);
-	scavtrap.beRepaired(3);
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.guardGate();
-	return 0;
-}
+class Animal {
+
+	protected:
+		std::string	type;
+
+	public:
+		Animal();
+		virtual ~Animal();
+		Animal(const Animal &other);
+		Animal &operator=(const Animal &other);
+		
+		virtual void makeSound() const;
+		virtual std::string getType() const;
+
+};
+
+
+#endif

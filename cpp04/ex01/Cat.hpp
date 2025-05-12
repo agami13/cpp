@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/09 16:38:20 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/05/10 16:50:35 by ybouaoud         ###   ########.fr       */
+/*   Created: 2025/05/12 18:46:31 by ybouaoud          #+#    #+#             */
+/*   Updated: 2025/05/12 18:49:06 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
-#include "ScavTrap.hpp"
+#ifndef CAT_HPP
+# define CAT_HPP
 
-int main() {
-	ScavTrap scavtrap("Guardy");
+#include "Animal.hpp"
 
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(95);
-	scavtrap.beRepaired(3);
-	scavtrap.attack("enemy");
-	scavtrap.takeDamage(5);
-	scavtrap.beRepaired(3);
-	scavtrap.guardGate();
-	return 0;
-}
+class Cat : public Animal {
+
+	public:
+		Cat();
+		~Cat();
+		Cat(const Cat &other);
+		Cat &operator=(const Cat &other);
+		void makeSound() const;
+};
+
+#endif
