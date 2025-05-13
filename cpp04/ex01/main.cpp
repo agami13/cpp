@@ -13,25 +13,28 @@
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "Wrongcat.hpp"
 
-int main()
-{
-	const Animal* meta = new Animal();
+int main() {
+
+
 	const Animal* j = new Dog();
 	const Animal* i = new Cat();
-	const WrongAnimal* wrong = new WrongAnimal();
-	const WrongAnimal* wrongCat = new WrongCat();
-	std::cout << wrong->getType() << " " << std::endl;
-	std::cout << wrongCat->getType() << " " << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	wrongCat->makeSound();
-	wrong->makeSound();
-	meta->makeSound();
-	
+	delete j;//should not create a leak
+	delete i;
+
+	Animal *animals[6];
+	for (int i = 0; i < 3; i++)
+		animals[i] = new Dog();
+	for (int i = 3; i < 6; i++)
+		animals[i] = new Cat();
+
+
+	for (int i = 0; i < 6; i++) {
+		animals[i]->makeSound();
+		std::cout << animals[i]->getType() << std::endl;
+		std::cout << "------------------------" << std::endl;
+		delete animals[i];
+	}
 
 	return 0;
 }

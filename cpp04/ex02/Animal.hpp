@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/05/12 18:45:43 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/05/12 18:48:50 by ybouaoud         ###   ########.fr       */
+/*   Created: 2025/05/12 18:15:23 by ybouaoud          #+#    #+#             */
+/*   Updated: 2025/05/12 18:49:10 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
+#ifndef POLYMORPHISM_HPP
+# define POLYMORPHISM_HPP
 
-# include "Animal.hpp"
-# include "brain.hpp"
+# include <iostream>
+# include <string>
 
-class Dog : public Animal {
-	private:
-		Brain *brain;
+class Animal {
+
+	protected:
+		std::string	type;
 
 	public:
-		Dog();
-		~Dog();
-		Dog(const Dog &other);
-		Dog &operator=(const Dog &other);
-		void makeSound() const;	
+		Animal();
+		virtual ~Animal();
+		Animal(const Animal &other);
+		Animal &operator=(const Animal &other);
+		
+		virtual void makeSound() const = 0;
+		std::string getType() const;
 
 };
+
 
 #endif

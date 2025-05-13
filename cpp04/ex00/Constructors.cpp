@@ -20,10 +20,8 @@ Animal::~Animal() {
 	std::cout << "Animal destructor called" << std::endl;
 }
 
-Animal::Animal( const Animal& other ) {
+Animal::Animal( const Animal& other ) : type(other.type) {
 	std::cout << "Animal copy constructor called" << std::endl;
-	if (this != &other)
-		*this = other;
 }
 
 Animal& Animal::operator=( const Animal& other ) {

@@ -1,4 +1,5 @@
-SRC = main.cpp ClapTrap.cpp \
+SRC = main.cpp Animal.cpp Constructors.cpp Dog.cpp Cat.cpp brain.cpp \
+		WrongCat.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -6,7 +7,7 @@ CXX =  -std=c++98
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-NAME = ClapTrap
+NAME = Animal
 
 all: $(NAME)
 
