@@ -1,5 +1,4 @@
-SRC = main.cpp Animal.cpp Constructors.cpp Dog.cpp Cat.cpp \
-		WrongCat.cpp \
+SRC = main.cpp Bureaucrat.cpp Form.cpp \
 
 OBJ = $(SRC:.cpp=.o)
 
@@ -7,7 +6,7 @@ CXX =  -std=c++98
 
 CXXFLAGS = -Wall -Wextra -Werror
 
-NAME = Polymorphism
+NAME = Form
 
 all: $(NAME)
 

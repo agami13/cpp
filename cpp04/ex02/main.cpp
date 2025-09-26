@@ -22,7 +22,6 @@ int main() {
     delete j; // should not create a leak
     delete i;
 
-    // Array of animals
     Animal* animals[6];
     for (int i = 0; i < 3; i++)
         animals[i] = new Dog();
@@ -62,8 +61,8 @@ int main() {
     // Deep copy test
     std::cout << "Testing Deep Copy:" << std::endl;
     Cat* cat1 = new Cat();
-    Cat* cat2 = new Cat(*cat1); // Deep copy using copy constructor
-    delete cat1; // Ensure cat2 is independent
+    Cat* cat2 = new Cat(*cat1);
+    delete cat1;
     std::cout << "Cat2 Type after deleting Cat1: " << cat2->getType() << std::endl;
     delete cat2;
 

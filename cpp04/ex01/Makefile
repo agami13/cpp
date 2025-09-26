@@ -12,10 +12,10 @@ NAME = Animal
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	clang++ $(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
+	c++ $(CXX) $(CXXFLAGS) $(OBJ) -o $(NAME)
 
 %.o: %.cpp
-	clang++ $(CXX) $(CXXFLAGS) -c $< -o $@
+	c++ $(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJ)

@@ -11,11 +11,16 @@
 /* ************************************************************************** */
 
 #include "Cat.hpp"
+#include <new>
 
 Cat::Cat() {
 
 	std::cout << "Cat default constructor called" << std::endl;
-	this->brain = new Brain();
+	this->brain = new(std::nothrow) Brain();
+	if (!this->brain) {
+		std::cerr << "Memory allocation failed for Cat's brain" << std::endl;
+		exit(1);
+	}
 	this->type = "Cat";
 
 }

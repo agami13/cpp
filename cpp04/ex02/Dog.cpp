@@ -15,7 +15,11 @@
 Dog::Dog() {
 
 	std::cout << "Dog default constructor called" << std::endl;
-	this->brain = new Brain();
+	this->brain = new(std::nothrow) Brain();
+	if (!this->brain) {
+		std::cerr << "Memory allocation failed for Dog's brain" << std::endl;
+		exit(1);
+	}
 	this->type = "Dog";
 
 }
