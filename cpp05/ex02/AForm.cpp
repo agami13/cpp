@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 16:11:53 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/09/26 16:51:17 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/09/26 18:20:31 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ AForm::~AForm() {
 AForm::AForm(const std::string& name, int gradeToSign, int gradeToExecute)
     : _name(name), _isSigned(false), _gradeToSign(gradeToSign), _gradeToExecute(gradeToExecute) {
     if (gradeToSign < 1 || gradeToExecute < 1) {
-        GradeTooHighException();
+        throw GradeTooHighException();
     } else if (gradeToSign > 150 || gradeToExecute > 150) {
-        GradeTooLowException();
+        throw GradeTooLowException();
     }
 }
 

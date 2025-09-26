@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:03:36 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/09/26 18:16:54 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/09/26 18:20:31 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,8 @@ int Bureaucrat::getGrade() const {
 void Bureaucrat::setGrade(int grade) {
     if (grade < 1) {
         throw GradeTooHighException();
-        this->grade = 1; // Set to max grade
     } else if (grade > 150) {
         throw GradeTooLowException();
-        this->grade = 150; // Set to min grade
     } else {
         this->grade = grade;
     }
