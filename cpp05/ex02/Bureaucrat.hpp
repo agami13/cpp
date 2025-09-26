@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:04:02 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/09/26 16:47:39 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/09/26 18:16:54 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class Bureaucrat {
 
     public:
         Bureaucrat();
+        Bureaucrat(const Bureaucrat& other);
         ~Bureaucrat();
         
         Bureaucrat(const std::string &name, int grade) : name(name) {

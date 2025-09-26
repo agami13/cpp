@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:03:36 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/09/26 17:00:05 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/09/26 18:16:54 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,9 @@
 #include <stdexcept>
 
 Bureaucrat::Bureaucrat() : name("Default Bureaucrat"), grade(150) {
+}
+
+Bureaucrat::Bureaucrat(const Bureaucrat& other) : name(other.name), grade(other.grade) {
 }
 
 Bureaucrat::~Bureaucrat() {
