@@ -6,13 +6,11 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/15 15:03:36 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/09/26 18:16:54 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/09/26 18:55:19 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include <endian.h>
-#include <stdexcept>
 
 Bureaucrat::Bureaucrat() : name("Default Bureaucrat"), grade(150) {
 }

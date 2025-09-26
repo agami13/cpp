@@ -6,15 +6,12 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/26 16:42:03 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/09/26 17:57:47 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/09/26 18:55:58 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Intern.hpp"
 #include "AForm.hpp"
-#include "ShrubberyCreationForm.hpp"
-#include "RobotomyRequestForm.hpp"
-#include "PresidentialPardonForm.hpp"
 #include <iostream>
 
 int main() {
