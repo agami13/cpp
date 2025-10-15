@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 16:29:23 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/15 16:42:55 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/15 18:30:57 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <stack>
 #include <list>
 #include <deque>
+#include <vector>
 #include <iterator>
 #include <algorithm>
 #include <exception>

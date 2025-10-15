@@ -6,14 +6,12 @@
 /*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/08 16:23:23 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/08 17:01:47 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/08 19:33:04 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "iter.hpp"
 
-#include <iostream>
-#include "iter.hpp"
 
 template<typename T> void printElement(const T& elem) {
     std::cout << elem << " ";
