@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ybouaoud <ybouaoud@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:41:06 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/17 20:44:42 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/20 19:54:53 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ class BitcoinExchange {
 
     public:
         BitcoinExchange(const std::string& dataFile);
+        BitcoinExchange(const BitcoinExchange& other);
+        BitcoinExchange& operator=(const BitcoinExchange& other);
         void processInputFile(const std::string& inputFile);
         double getExchangeRate(const std::string& date) const;
         ~BitcoinExchange();

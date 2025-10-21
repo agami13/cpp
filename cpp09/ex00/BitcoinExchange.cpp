@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   BitcoinExchange.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ybouaoud <ybouaoud@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:41:03 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/17 20:58:41 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/20 19:55:06 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,17 @@
 
 BitcoinExchange::BitcoinExchange(const std::string& dataFile) {
     loadData(dataFile);
+}
+
+BitcoinExchange::BitcoinExchange(const BitcoinExchange& other) {
+    dataMap = other.dataMap;
+}
+
+BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other) {
+    if (this != &other) {
+        dataMap = other.dataMap;
+    }
+    return *this;
 }
 
 BitcoinExchange::~BitcoinExchange() {}
