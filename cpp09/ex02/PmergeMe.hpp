@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:42:19 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/21 17:23:13 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:25:39 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ class PmergeMe {
                 std::ostringstream oss;
                 oss << "Time to process a range of " << container.size()
                     << " elements with " << label << " : "
-                    << std::fixed << std::setprecision(3) << duration << " us";
+                    << std::fixed << std::setprecision(5) << duration << " us";
                 return oss.str();
             }
 
