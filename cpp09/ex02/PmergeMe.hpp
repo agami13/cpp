@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:42:19 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/21 13:17:13 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:23:13 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,21 +30,6 @@ class PmergeMe {
         void fordJohnsonSortVector(std::vector<int>& arr);
         void fordJohnsonSortDeque(std::deque<int>& arr);
 
-        template<typename T>
-            T jacobSthalForm(size_t n) {
-                T sequence;
-                size_t K1 = 1, K2 = 1;
-                sequence.push_back(1);
-                while (true) {
-                    size_t next = K1 + 2 * K2;
-                    if (next > n)
-                        break;
-                    sequence.push_back(next);
-                    K2 = K1;
-                    K1 = next;
-                }
-                return sequence;
-            }
         template<typename T>
             void binaryInsertion(T& mainChain, int element) {
                 typename T::iterator left = mainChain.begin();
@@ -80,14 +65,16 @@ class PmergeMe {
                 return true;
             }
         template<typename T>
-            void measureSortTime(T& container, void (PmergeMe::*sortFunc)(T&), const std::string& label) {
+            std::string measureSortTime(T& container, void (PmergeMe::*sortFunc)(T&), const std::string& label) {
                 clock_t start = clock();
                 (this->*sortFunc)(container);
                 clock_t end = clock();
                 double duration = double(end - start) / CLOCKS_PER_SEC * 1e6; // microseconds
-                    std::cout << "Time to process a range of " << container.size()
-                            << " elements with " << label << " : "
-                            << std::fixed << std::setprecision(5) << duration << " us" << std::endl;
+                std::ostringstream oss;
+                oss << "Time to process a range of " << container.size()
+                    << " elements with " << label << " : "
+                    << std::fixed << std::setprecision(3) << duration << " us";
+                return oss.str();
             }
 
     public:
