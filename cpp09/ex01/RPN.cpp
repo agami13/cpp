@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RPN.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ybouaoud <ybouaoud@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ybouaoud <ybouaoud@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:42:09 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/17 22:34:53 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:28:15 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ RPN::RPN(const RPN& other) : rpnStack(other.rpnStack) {
 }
 
 RPN& RPN::operator=(const RPN& other) {
-    if (this != &other) {
+    if (this != &other)
         rpnStack = other.rpnStack;
-    }
     return *this;
 }
 
@@ -66,9 +65,8 @@ int RPN::evaluate(const std::string& expression) {
             int result = applyOperator(token[0], a, b);
             rpnStack.push(result);
         }
-        else {
+        else
             throw std::invalid_argument("Invalid token: " + token);
-        }
     }
 
     if (rpnStack.size() != 1)

@@ -6,7 +6,7 @@
 /*   By: ybouaoud <ybouaoud@1337.student.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:41:03 by ybouaoud          #+#    #+#             */
-/*   Updated: 2025/10/20 19:55:06 by ybouaoud         ###   ########.fr       */
+/*   Updated: 2025/10/21 17:30:02 by ybouaoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,8 @@ BitcoinExchange::BitcoinExchange(const BitcoinExchange& other) {
 }
 
 BitcoinExchange& BitcoinExchange::operator=(const BitcoinExchange& other) {
-    if (this != &other) {
+    if (this != &other)
         dataMap = other.dataMap;
-    }
     return *this;
 }
 
@@ -51,9 +50,8 @@ void BitcoinExchange::loadData(const std::string& dataFile) {
         std::istringstream ss(line);
         std::string date;
         double value;
-        if (std::getline(ss, date, ',') && ss >> value) {
+        if (std::getline(ss, date, ',') && ss >> value)
             dataMap[trim(date)] = value;
-        }
     }
     file.close();
     std::cout << "Data loaded successfully from " << dataFile << std::endl;
@@ -119,20 +117,19 @@ void BitcoinExchange::processInputFile(const std::string& inputFile) {
         if (std::getline(ss, date, '|') && std::getline(ss, valueStr)) {
             double value;
             try {
-                if (!isValidDate(date)) {
+                if (!isValidDate(date))
                     output << "Error: Invalid date => " << date << std::endl;
-                } else if (!isValidValue(valueStr, value)) {
+                else if (!isValidValue(valueStr, value))
                     output << "Error: Invalid value => " << valueStr << std::endl;
-                } else {
+                else {
                     double rate = findClosestRate(trim(date));
                     output << date << " => " << value << " = " << (value * rate) << std::endl;
                 }
             } catch (const std::exception& e) {
                 output << "Error: " << e.what() << std::endl;
             }
-        } else {
+        } else
             output << "Error: Malformed line => " << line << std::endl;
-        }
         std::cout << output.str();
     }
     file.close();
